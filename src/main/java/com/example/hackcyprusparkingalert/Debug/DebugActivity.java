@@ -10,7 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.crashlytics.android.Crashlytics;
+import com.example.hackcyprusparkingalert.GetttingStarted.GettingStartedActivity;
 import com.example.hackcyprusparkingalert.R;
+import com.example.hackcyprusparkingalert.Registration.RegistrationActivity;
+import com.example.hackcyprusparkingalert.SignIn.SignInActivity;
 
 import java.util.Calendar;
 
@@ -25,6 +28,10 @@ public class DebugActivity extends AppCompatActivity {
     //////////////////////
 
     String Activities[] ={
+            "GettingStartedActivity",
+
+            "RegistrationActivity",
+            "SignInActivity",
 
     };
 
@@ -50,6 +57,13 @@ public class DebugActivity extends AppCompatActivity {
                 //This will add the activity to the debuglist
                 /////////////////////////
                 switch(position){
+                    case 0:
+                        startActivity(new Intent(DebugActivity.this, GettingStartedActivity.class));break;
+                    case 1:
+                        startActivity(new Intent(DebugActivity.this, RegistrationActivity.class));break;
+                    case 2:
+                        startActivity(new Intent(DebugActivity.this, SignInActivity.class));break;
+
 
                 }
 
